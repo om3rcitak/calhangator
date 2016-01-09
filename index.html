@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tanışma Calhangatoru</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script type="text/javascript">
+        function placeholderIsSupported() {
+            test = document.createElement('input');
+            return ('placeholder' in test);
+        }
+
+        $(document).ready(function(){
+            placeholderSupport = placeholderIsSupported() ? 'placeholder' : 'no-placeholder';
+            $('html').addClass(placeholderSupport);
+        });
+    </script>
+
+</head>
+<body class="tanisalim">
+
+<div id="tanismaFormu">
+    <div class='fieldset'>
+        <legend>Tanışma Calhangatoru</legend>
+        <form action="sonuc.php" method="post" data-validate="parsley">
+            <div class='row'>
+                <label for='adiniz'>Adınız Soyadınız:</label>
+                <input type="text" placeholder="Adınız Soyadınız" name='adiniz' id='adiniz' data-required="true" data-error-message="Adınızı yazarsanız bi ihtimal tanıyabilir!">
+            </div>
+            <div class='row'>
+                <label for='adi'>Tanışmak İstediğiniz Kişinin Adı:</label>
+                <input type="text" placeholder="Tanışmak İstediğiniz Kişinin Adı" name='adi' id='adi' data-required="true" data-error-message="Kiminle tanışmak istediğinizi belirtmeniz gerekli!">
+            </div>
+            <div class='row'>
+                <label for='soyadi'>Tanışmak İstediğiniz Kişinin Soyadı:</label>
+                <input type="text" placeholder="Soyadı" name='soyadi' id='soyadi' data-required="true" data-error-message="Kiminle tanışmak istediğinizi belirtmeniz gerekli!">
+            </div>
+            <div class='row'>
+                <label for='meslek'>Mesleğiniz?</label>
+                <input type="text" placeholder="Mesleğiniz?" name='meslek' id='meslek' data-required="true" data-error-message="Kiminle tanışmak istediğinizi belirtmeniz gerekli!">
+            </div>
+
+            <input type="submit" name="submit" value="İSTEĞİ GÖNDER">
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
