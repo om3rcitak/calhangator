@@ -16,5 +16,6 @@ hakan calhanoglu'nun kenan sofuoglu'na yaptığı tribi yapan program
 
     $chat->render();
 
-### görünümü
-![cat](http://omercitak.com/wp-content/uploads/calhangator.png)
+### Görüntüleri:
+![cat](http://om3r.kim/1.png)
+![cat](http://om3r.kim/2.png)
